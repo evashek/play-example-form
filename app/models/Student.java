@@ -7,7 +7,7 @@ import views.formdata.StudentFormData;
 /**
  * Simple model class to represent students.
  * This class includes:
- * <ul> 
+ * <ul>
  * <li> The model structure (fields, plus getters and setters).
  * <li> Methods to facilitate form display (makeStudentFormData).
  * <li> Some fields and methods to "fake" a database of Students, including valid and invalid.
