@@ -145,6 +145,22 @@ illustrates how to load a newer version of Bootstrap with an older, HTMLUnit-com
 Another solution is to use [PhantomJS](http://phantomjs.org/) rather than HTMLUnit; then you can
 use current versions of JQuery. [This fork](https://github.com/buster84/play-example-form) shows how to use PhantomJS.
         
+ER Design
+---------
+![model](https://raw.github.com/evashek/play-example-form/master/doc/er-model.png)
+This ER diagram shows how the entities of the application interact to do several things:
+  * List all students who have submitted the form.
+  * Find any students with a particular: (a) hobby, (b) level, (c) gpa, or (d) major.
+  * Create a new hobby or delete an existing hobby.
+  * Create a new Level or delete an existing level.
+  * Create a new GPA interval or delete an existing interval.
+  * Create a new major or delete an existing major.
+
+The assumptions shown on the resulting model include:
+  * Major and Student have a one to many relationship.  Although usually students can have more than one major, the current system can only handle up to 1 major listed (and zero minimum).
+  * All Major, Hobby, GradePointAverage, and GradeLevel can be listed with no students.
+  * Major and Hobby are optional fields while GradePointAverage and GradeLevel are required.
+
 Issues
 ------
 
